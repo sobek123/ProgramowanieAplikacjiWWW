@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model.Name</h1>
+    <form>
+        <br />
+        <div class="row">
+            <div class="col">
+                <label for="Street">Ulica</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col">
+                <label for="Number">Number</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col">
+                <label for="ZipCode">ZipCode</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col">
+                <label for="City">City</label>
+                <input type="text" class="form-control">
+                <br />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Zatwierdz</button>
+        <span asp-validation-for="Address.Street" class="text-danger"></span>
+    </form>
+</div>
